@@ -41,9 +41,8 @@ public class cheaYukbok {
     public static void main(String[] args) {
         int n = 5;
         int[] lost = {2, 4};
-        int[] reverse = {1, 3, 5};
+        int[] reserve = {3};
 
-        int answer = solution(n, lost, reverse);
-
+        int answer = solution(n, lost, reserve);
     }
 }
