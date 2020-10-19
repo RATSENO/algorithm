@@ -5,15 +5,18 @@ import java.util.Stack;
 public class ValidParentheses {
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<Character>();
-        for (char c : s.toCharArray()) {
-            if (c == '(')
+        char[] chars = s.toCharArray();
+        //(){}[]
+        for (char aChar : chars) {
+            if(aChar =='('){
                 stack.push(')');
-            else if (c == '{')
+            }else if(aChar=='{'){
                 stack.push('}');
-            else if (c == '[')
+            }else if(aChar=='['){
                 stack.push(']');
-            else if (stack.isEmpty() || stack.pop() != c)
+            }else if(stack.isEmpty() || stack.pop() != aChar){
                 return false;
+            }
         }
         return stack.isEmpty();
     }
@@ -21,5 +24,7 @@ public class ValidParentheses {
     public static void main(String[] args) {
         //isValid("()");
         isValid("(){}[]");
+        isValid("(){}[");
+        isValid("(");
     }
 }
