@@ -18,10 +18,16 @@ public class ReversInteger {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("Integer max:"+Integer.MAX_VALUE);
+        System.out.println("Integer min:"+Integer.MIN_VALUE);
+
         int reverse = reverse(123);
         int reverse1 = reverse(-123);
         int reverse2 = reverse(120);
         int reverse3 = reverse(0);
         int reverse4 = reverse(-120);
+        int reverse5 = reverse(2147483647);
+        int reverse7 = reverse(-2147483648);
     }
 }

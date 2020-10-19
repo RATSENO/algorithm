@@ -5,14 +5,13 @@ import java.util.Arrays;
 public class MaximumSubarray {
 
     private static int solution(int[] nums){
-        int best_sum = Integer.MIN_VALUE;
-        int end_sum = 0;
-
-        for (int num : nums) {
-            end_sum = Math.max(end_sum + num, num);
-            best_sum  = Math.max(end_sum, best_sum);
+        int maxSoFar = nums[0];
+        int maxEndingHere = nums[0];
+        for(int i=1;i<nums.length; i++){
+            maxEndingHere = Math.max(maxEndingHere+nums[i], nums[i]);
+            maxSoFar = Math.max(maxSoFar, maxEndingHere);
         }
-        return best_sum;
+        return maxSoFar;
     }
 
     public static void main(String[] args) {
