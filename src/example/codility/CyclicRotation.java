@@ -30,6 +30,6 @@ public class CyclicRotation {
     }
 
     public static void main(String[] args) {
-        solution(new int[]{-4},0);
+        int[] solution = solution(new int[]{4,3,2,1}, 3);
     }
 }
