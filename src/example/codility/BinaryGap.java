@@ -11,7 +11,9 @@ public class BinaryGap {
 
         for(int i=0;i<binaryChar.length;++i){
             if(binaryChar[i] == '1'){
-                if(gapLength > totalGapLength) totalGapLength = gapLength;
+                if(gapLength > totalGapLength) {
+                    totalGapLength = gapLength;
+                }
                 gapLength = 0;
             }else{
                 ++gapLength;
@@ -22,6 +24,7 @@ public class BinaryGap {
     }
 
     public static void main(String[] args) {
-        solution(529 );
+        int solution = solution(529);
+        System.out.println(solution);
     }
 }
