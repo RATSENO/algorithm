@@ -36,5 +36,6 @@ public class MaxCounters {
 
     public static void main(String[] args) {
         int[] res = solution(5, new int[]{3,4,4,6,1,4,4});
+        System.out.println(res);
     }
 }
